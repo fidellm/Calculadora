@@ -4,7 +4,7 @@ import tkinter
 from urllib3 import *
 import urllib.request
 
-urllib.request.urlretrieve('https://cdn-icons-png.flaticon.com/512/346/346399.png', "icono-calculadora.png")
+urllib.request.urlretrieve('https://icon-icons.com/downloadimage.php?id=2972&root=37/PNG/512/&file=calculator_3534.png', "icono-calculadora.png")
 colordark = "#171717"
 weix2 = 1
 
