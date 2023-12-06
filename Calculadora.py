@@ -18,7 +18,10 @@ class Calculadora:
         self.root = Tk()
         #root.geometry("274x328")
         self.root.config(bg=colordow, padx=3, pady=4)
+        self.root.minsize(400, 400)
         self.root.title("Calculadora :D")
+        self.root.resizable(40, 40)
+        self.root.anchor("center")
 
         #CONFIGURO VENTANA Y SUS VERTICALES Y HORIZONTALES
         #self.root.minsize(width=268, height=369)
@@ -54,8 +57,8 @@ class Calculadora:
 
         #Valores graficos de los botones de las operaciones:
         
-        self.color_btn_oper = "#555"
-        self.fg_btn_oper = "#ddd"
+        self.color_btn_oper = "#161"
+        self.fg_btn_oper = "#bbd"
         
         self.tmñ_btn_oper_x = 7
         self.tmñ_btn_oper_y = 3
@@ -66,14 +69,14 @@ class Calculadora:
         self.font_oper = "Sans"
         
         #Valores graficos de los botones de los parentesis:
-        self.color_btn_par = "#006"
-        self.fg_btn_par = "#aaf"
+        self.color_btn_par = "#3f3f40"
+        self.fg_btn_par = "#ddf"
         
         self.tmñ_btn_par_x = 7
         self.tmñ_btn_par_y = 3
         
-        self.padx_par = 1
-        self.pady_par = 1
+        self.padx_par = 3
+        self.pady_par = 0
         
         self.font_par = "Sans"
         
@@ -84,8 +87,8 @@ class Calculadora:
         self.tmñ_btn_igual_x = 7
         self.tmñ_btn_igual_y = 3
         
-        self.padx_igual = 1
-        self.pady_igual = 1
+        self.padx_igual = (1, 5)
+        self.pady_igual = (6, 2)
         
         self.font_igual = "Sans"
         
@@ -121,7 +124,7 @@ class Calculadora:
 
         #Otros botones
 
-        self.btnBorrar = Button(self.root, text="AC", bg="#B7B100", command=lambda:self.clear_entry()).grid(row=0, column=4, sticky=W+E)
+        self.btnBorrar = Button(self.root, text="C", font="Sans", fg="#000", bg="#55f", width=7, command=lambda:self.clear_entry()).grid(row=0, column=4, sticky=W+E, padx=(6, 3), pady=(1, 8))
         self.btnBorrar_uno = Button(self.root, text="⟸", command=lambda:self.clear_uno()).grid(row=1, column=3, columnspan=2, sticky=W+E)
 
         self.btnSum = Button(self.root, text="+", font=self.font_oper, fg=self.fg_btn_oper, bg=self.color_btn_oper, width=self.tmñ_btn_oper_x, height=self.tmñ_btn_oper_y, command=lambda:self.get_char("+")).grid(row=2, column=3, sticky=W+E, padx=self.padx_oper, pady=self.pady_oper)
