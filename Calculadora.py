@@ -65,6 +65,44 @@ class Calculadora:
         
         self.font_oper = "Sans"
         
+        #Valores graficos de los botones de los parentesis:
+        self.color_btn_par = "#006"
+        self.fg_btn_par = "#aaf"
+        
+        self.tmñ_btn_par_x = 7
+        self.tmñ_btn_par_y = 3
+        
+        self.padx_par = 1
+        self.pady_par = 1
+        
+        self.font_par = "Sans"
+        
+        #Valores graficos del boton de igual:
+        self.color_btn_igual = "#88f"
+        self.fg_btn_igual = "#000"
+        
+        self.tmñ_btn_igual_x = 7
+        self.tmñ_btn_igual_y = 3
+        
+        self.padx_igual = 1
+        self.pady_igual = 1
+        
+        self.font_igual = "Sans"
+        
+        #Valores graficos del boton de punto:
+        self.color_btn_punto = "#1080B7"
+        self.fg_btn_punto = "#000"
+        
+        self.tmñ_btn_punto_x = 7
+        self.tmñ_btn_punto_y = 3
+        
+        self.padx_punto = 1
+        self.pady_punto = 1
+        
+        self.font_punto = "Sans"
+        
+        
+        
         #Botones De NumerosS
 
         self.btnUno = Button(self.root, text="1", font=self.font_num, fg=self.fg_btn_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("1")).grid(row=1, column=0, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
@@ -89,13 +127,13 @@ class Calculadora:
         self.btnSum = Button(self.root, text="+", font=self.font_oper, fg=self.fg_btn_oper, bg=self.color_btn_oper, width=self.tmñ_btn_oper_x, height=self.tmñ_btn_oper_y, command=lambda:self.get_char("+")).grid(row=2, column=3, sticky=W+E, padx=self.padx_oper, pady=self.pady_oper)
         self.btnRestar = Button(self.root, text="-", font=self.font_oper, fg=self.fg_btn_oper, bg=self.color_btn_oper, width=self.tmñ_btn_oper_x, height=self.tmñ_btn_oper_y, command=lambda:self.get_char("-")).grid(row=3, column=3, sticky=W+E, padx=self.padx_oper, pady=self.pady_oper)
         self.btnMulti = Button(self.root, text="x", font=self.font_oper, fg=self.fg_btn_oper, bg=self.color_btn_oper, width=self.tmñ_btn_oper_x, height=self.tmñ_btn_oper_y, command=lambda:self.get_char("x")).grid(row=4, column=3, sticky=W+E, padx=self.padx_oper, pady=self.pady_oper)
-        self.btnResolver = Button(self.root, text="=", font=self.font_oper, bg="#636363", command=self.operate).grid(row=5, column=0, columnspan=2, sticky=W+E)
+        self.btnIgual = Button(self.root, text="=", font=self.font_igual, fg=self.fg_btn_igual, bg=self.color_btn_igual, width=self.tmñ_btn_igual_x, height=self.tmñ_btn_igual_y, command=self.operate).grid(row=5, column=0, columnspan=2, sticky=W+E, padx=self.padx_igual, pady=self.pady_igual)
 
         self.btnDividir = Button(self.root, text="÷", font=self.font_oper, fg=self.fg_btn_oper, bg=self.color_btn_oper, width=self.tmñ_btn_oper_x, height=self.tmñ_btn_oper_y, command=lambda:self.get_char("÷")).grid(row=4, column=2, sticky=W+E, padx=self.padx_oper, pady=self.pady_oper)
         self.btnPotencia = Button(self.root, text="▫", font=self.font_oper, fg=self.fg_btn_oper, bg=self.color_btn_oper, width=self.tmñ_btn_oper_x, height=self.tmñ_btn_oper_y, command=lambda:self.get_char("▫")).grid(row=3, column=4, sticky=W+E, padx=self.padx_oper, pady=self.pady_oper)
-        self.btnPar1 = Button(self.root, text="(", bg="#252525", command=lambda:self.get_char("(")).grid(row=5, column=2, sticky=W+E)
-        self.btnPar2 = Button(self.root, text=")", bg="#252525", command=lambda:self.get_char(")")).grid(row=5, column=3, sticky=W+E)
-        self.btnPunto = Button(self.root, text=".", bg="#1080B7", command=lambda:self.get_char(".")).grid(row=4, column=1, sticky=W+E)
+        self.btnPar1 = Button(self.root, text="(", font=self.font_par, fg=self.fg_btn_par, bg=self.color_btn_par, width=self.tmñ_btn_par_x, height=self.tmñ_btn_par_y, command=lambda:self.get_char("(")).grid(row=5, column=2, sticky=W+E, padx=self.padx_par, pady=self.pady_par)
+        self.btnPar2 = Button(self.root, text=")", font=self.font_par, fg=self.fg_btn_par, bg=self.color_btn_par, width=self.tmñ_btn_par_x, height=self.tmñ_btn_par_y, command=lambda:self.get_char(")")).grid(row=5, column=3, sticky=W+E, padx=self.padx_par, pady=self.pady_par)
+        self.btnPunto = Button(self.root, text=".", font=self.font_punto, fg=self.fg_btn_punto, bg=self.color_btn_punto, width=self.tmñ_btn_punto_x, height=self.tmñ_btn_punto_y, command=lambda:self.get_char(".")).grid(row=4, column=1, sticky=W+E, padx=self.padx_punto, pady=self.pady_punto)
 
     #Función para insertar un caracter en el entry:
     def get_char(self, n):
