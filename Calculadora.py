@@ -41,6 +41,8 @@ class Calculadora:
 
         #Valores graficos de los botones de numeros:
         
+        self.color_btn_num = "#777"
+        
         self.tmñ_btn_num_x = 7
         self.tmñ_btn_num_y = 3
         
@@ -59,23 +61,21 @@ class Calculadora:
         
         self.font_oper = "Sans"
         
-        #Botones De Numeros
+        #Botones De NumerosS
 
-        coln = "#D30015"
+        self.btnUno = Button(self.root, text="1", font=self.font_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("1")).grid(row=1, column=0, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
+        self.btnDos = Button(self.root, text="2", font=self.font_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("2")).grid(row=1, column=1, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
+        self.btnTres = Button(self.root, text="3", font=self.font_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("3")).grid(row=1, column=2, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
 
-        self.btnUno = Button(self.root, text="1", font=self.font_num, bg=coln, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("1")).grid(row=1, column=0, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
-        self.btnDos = Button(self.root, text="2", font=self.font_num, bg=coln, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("2")).grid(row=1, column=1, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
-        self.btnTres = Button(self.root, text="3", font=self.font_num, bg=coln, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("3")).grid(row=1, column=2, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
+        self.btnCuatro = Button(self.root, text="4", font=self.font_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("4")).grid(row=2, column=0, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
+        self.btnCinco = Button(self.root, text="5", font=self.font_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("5")).grid(row=2, column=1, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
+        self.btnSeis = Button(self.root, text="6", font=self.font_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("6")).grid(row=2, column=2, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
 
-        self.btnCuatro = Button(self.root, text="4", font=self.font_num, bg=coln, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("4")).grid(row=2, column=0, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
-        self.btnCinco = Button(self.root, text="5", font=self.font_num, bg=coln, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("5")).grid(row=2, column=1, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
-        self.btnSeis = Button(self.root, text="6", font=self.font_num, bg=coln, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("6")).grid(row=2, column=2, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
+        self.btnSiete = Button(self.root, text="7", font=self.font_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("7")).grid(row=3, column=0, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
+        self.btnOcho = Button(self.root, text="8", font=self.font_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("8")).grid(row=3, column=1, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
+        self.btnNueve = Button(self.root, text="9", font=self.font_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("9")).grid(row=3, column=2, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
 
-        self.btnSiete = Button(self.root, text="7", font=self.font_num, bg=coln, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("7")).grid(row=3, column=0, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
-        self.btnOcho = Button(self.root, text="8", font=self.font_num, bg=coln, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("8")).grid(row=3, column=1, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
-        self.btnNueve = Button(self.root, text="9", font=self.font_num, bg=coln, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("9")).grid(row=3, column=2, sticky=W+E, padx=self.padx_num, pady= self.pady_num)
-
-        self.btnCero = Button(self.root, text="0", font=self.font_num, bg=coln, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("0")).grid(row=4, column=0, sticky=E+W, padx=self.padx_num, pady= self.pady_num)
+        self.btnCero = Button(self.root, text="0", font=self.font_num, bg=self.color_btn_num, width=self.tmñ_btn_num_x, height=self.tmñ_btn_num_y, command=lambda:self.get_char("0")).grid(row=4, column=0, sticky=E+W, padx=self.padx_num, pady= self.pady_num)
 
         #Otros botones
 
@@ -134,7 +134,6 @@ class Calculadora:
 
 #Llamar a la clase
 ventana = Calculadora()
-
 #Actualizar constantemente la ventana :D
 ventana.root.mainloop()
 
